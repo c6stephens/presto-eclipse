@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ASCII"?>
+<DBDefinition:DatabaseVendorDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:DBDefinition="http:///org/eclipse/datatools/modelbase/dbdefinition/dbdefinition.ecore" vendor="PRESTO" version="0.74" maximumIdentifierLength="64" maximumCommentLength="64" sequenceSupported="false" aliasSupported="false" storedProcedureSupported="false">
+
+  <predefinedDataTypeDefinitions xmi:id="DOUBLE_PRECISION_1" keyConstraintSupported="false" primitiveType="DOUBLE_PRECISION" jdbcEnumType="8" javaClassName="double">
+    <defaultValueTypes>NULL</defaultValueTypes>
+    <name>DOUBLE</name>
+  </predefinedDataTypeDefinitions>
+
+  <predefinedDataTypeDefinitions xmi:id="CHARACTER_1" lengthSupported="true" keyConstraintSupported="false" maximumLength="2147483647" jdbcEnumType="12" javaClassName="java.lang.String">
+    <defaultValueTypes>NULL</defaultValueTypes>
+    <name>VARCHAR</name>
+  </predefinedDataTypeDefinitions>
+
+  <!--
+  <predefinedDataTypeDefinitions xmi:id="CHARACTER_4" lengthSupported="true" keyConstraintSupported="true" maximumLength="2147483647" jdbcEnumType="-1" javaClassName="java.lang.String">
+    <defaultValueTypes>NULL</defaultValueTypes>
+    <name>LONGVARCHAR</name>
+  </predefinedDataTypeDefinitions>
+  -->
+
+  <predefinedDataTypeDefinitions xmi:id="DATE_1" keyConstraintSupported="false" primitiveType="DATE" jdbcEnumType="91" javaClassName="java.sql.Date">
+    <defaultValueTypes>NULL</defaultValueTypes>
+    <name>DATE</name>
+  </predefinedDataTypeDefinitions>
+
+  <predefinedDataTypeDefinitions xmi:id="TIME_1" keyConstraintSupported="false" primitiveType="TIME" jdbcEnumType="92" javaClassName="java.sql.Time">
+    <defaultValueTypes>NULL</defaultValueTypes>
+    <name>TIME</name>
+  </predefinedDataTypeDefinitions>
+
+  <predefinedDataTypeDefinitions xmi:id="TIMESTAMP_1" keyConstraintSupported="false" primitiveType="TIMESTAMP" jdbcEnumType="93" javaClassName="java.sql.Timestamp">
+    <defaultValueTypes>NULL</defaultValueTypes>
+    <name>TIMESTAMP</name>
+  </predefinedDataTypeDefinitions>
+
+  <predefinedDataTypeDefinitions xmi:id="BOOLEAN_1" keyConstraintSupported="false" primitiveType="BOOLEAN" jdbcEnumType="16" javaClassName="boolean">
+    <defaultValueTypes>NULL</defaultValueTypes>
+    <name>BOOLEAN</name>
+  </predefinedDataTypeDefinitions>
+
+  <predefinedDataTypeDefinitions xmi:id="BIGINT_1" keyConstraintSupported="false" primitiveType="BIGINT" jdbcEnumType="-5" javaClassName="long">
+    <defaultValueTypes>NULL</defaultValueTypes>
+    <name>BIGINT</name>
+  </predefinedDataTypeDefinitions>
+
+  <predefinedDataTypeDefinitions xmi:id="BINARY_VARYING_1" keyConstraintSupported="false" primitiveType="BINARY_VARYING" jdbcEnumType="-3" javaClassName="byte[]">
+    <defaultValueTypes>NULL</defaultValueTypes>
+    <name>VARBINARY</name>
+  </predefinedDataTypeDefinitions>
+
+  <columnDefinition identitySupported="false" computedSupported="false" identityStartValueSupported="true" identityIncrementSupported="true" identityMinimumSupported="true" identityMaximumSupported="true" identityCycleSupported="true"/>
+  <constraintDefinition clusteredPrimaryKeySupported="true" clusteredUniqueConstraintSupported="true">
+    <parentUpdateDRIRuleType>RESTRICT</parentUpdateDRIRuleType>
+    <parentUpdateDRIRuleType>NO_ACTION</parentUpdateDRIRuleType>
+    <parentDeleteDRIRuleType>RESTRICT</parentDeleteDRIRuleType>
+    <parentDeleteDRIRuleType>CASCADE</parentDeleteDRIRuleType>
+    <parentDeleteDRIRuleType>SET_NULL</parentDeleteDRIRuleType>
+    <parentDeleteDRIRuleType>NO_ACTION</parentDeleteDRIRuleType>
+    <checkOption>NONE</checkOption>
+    <checkOption>LOCAL</checkOption>
+    <checkOption>CASCADE</checkOption>
+  </constraintDefinition>
+</DBDefinition:DatabaseVendorDefinition>

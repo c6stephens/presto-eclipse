@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.datatools.connectivity.sqm.core.databaseDefinition">
+      <definition
+            description="%product.display.description"
+            file="runtime/vendors/PRESTO_0.74/PRESTO_0.74.xmi"
+            product="PRESTO"
+            productDisplayString="%product.display.string"
+            version="0.74"
+            versionDisplayString="%product.display.version.string"/>
+   </extension>
+</plugin>
