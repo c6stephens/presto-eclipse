@@ -1,55 +1,89 @@
 <?xml version="1.0" encoding="ASCII"?>
-<DBDefinition:DatabaseVendorDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:DBDefinition="http:///org/eclipse/datatools/modelbase/dbdefinition/dbdefinition.ecore" vendor="PRESTO" version="0.74" maximumIdentifierLength="64" maximumCommentLength="64" sequenceSupported="false" aliasSupported="false" storedProcedureSupported="false">
-
-  <predefinedDataTypeDefinitions xmi:id="DOUBLE_PRECISION_1" keyConstraintSupported="false" primitiveType="DOUBLE_PRECISION" jdbcEnumType="8" javaClassName="double">
+<DBDefinition:DatabaseVendorDefinition
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:DBDefinition="http:///org/eclipse/datatools/modelbase/dbdefinition/dbdefinition.ecore"
+    vendor="Presto"
+    version="0.74"
+    maximumIdentifierLength="64"
+    maximumCommentLength="64"
+    storedProcedureSupported="false">
+  <predefinedDataTypeDefinitions
+      xmi:id="DOUBLE_PRECISION_1"
+      primitiveType="DOUBLE_PRECISION"
+      jdbcEnumType="8"
+      javaClassName="double">
     <defaultValueTypes>NULL</defaultValueTypes>
     <name>DOUBLE</name>
   </predefinedDataTypeDefinitions>
-
-  <predefinedDataTypeDefinitions xmi:id="CHARACTER_1" lengthSupported="true" keyConstraintSupported="false" maximumLength="2147483647" jdbcEnumType="12" javaClassName="java.lang.String">
+  <predefinedDataTypeDefinitions
+      xmi:id="CHARACTER_1"
+      lengthSupported="true"
+      maximumLength="2147483647"
+      jdbcEnumType="12"
+      javaClassName="java.lang.String">
     <defaultValueTypes>NULL</defaultValueTypes>
     <name>VARCHAR</name>
   </predefinedDataTypeDefinitions>
-
-  <!--
-  <predefinedDataTypeDefinitions xmi:id="CHARACTER_4" lengthSupported="true" keyConstraintSupported="true" maximumLength="2147483647" jdbcEnumType="-1" javaClassName="java.lang.String">
-    <defaultValueTypes>NULL</defaultValueTypes>
-    <name>LONGVARCHAR</name>
-  </predefinedDataTypeDefinitions>
-  -->
-
-  <predefinedDataTypeDefinitions xmi:id="DATE_1" keyConstraintSupported="false" primitiveType="DATE" jdbcEnumType="91" javaClassName="java.sql.Date">
+  <predefinedDataTypeDefinitions
+      xmi:id="DATE_1"
+      primitiveType="DATE"
+      jdbcEnumType="91"
+      javaClassName="java.sql.Date">
     <defaultValueTypes>NULL</defaultValueTypes>
     <name>DATE</name>
   </predefinedDataTypeDefinitions>
-
-  <predefinedDataTypeDefinitions xmi:id="TIME_1" keyConstraintSupported="false" primitiveType="TIME" jdbcEnumType="92" javaClassName="java.sql.Time">
+  <predefinedDataTypeDefinitions
+      xmi:id="TIME_1"
+      primitiveType="TIME"
+      jdbcEnumType="92"
+      javaClassName="java.sql.Time">
     <defaultValueTypes>NULL</defaultValueTypes>
     <name>TIME</name>
   </predefinedDataTypeDefinitions>
-
-  <predefinedDataTypeDefinitions xmi:id="TIMESTAMP_1" keyConstraintSupported="false" primitiveType="TIMESTAMP" jdbcEnumType="93" javaClassName="java.sql.Timestamp">
+  <predefinedDataTypeDefinitions
+      xmi:id="TIMESTAMP_1"
+      primitiveType="TIMESTAMP"
+      jdbcEnumType="93"
+      javaClassName="java.sql.Timestamp">
     <defaultValueTypes>NULL</defaultValueTypes>
     <name>TIMESTAMP</name>
   </predefinedDataTypeDefinitions>
-
-  <predefinedDataTypeDefinitions xmi:id="BOOLEAN_1" keyConstraintSupported="false" primitiveType="BOOLEAN" jdbcEnumType="16" javaClassName="boolean">
+  <predefinedDataTypeDefinitions
+      xmi:id="BOOLEAN_1"
+      primitiveType="BOOLEAN"
+      jdbcEnumType="16"
+      javaClassName="boolean">
     <defaultValueTypes>NULL</defaultValueTypes>
     <name>BOOLEAN</name>
   </predefinedDataTypeDefinitions>
-
-  <predefinedDataTypeDefinitions xmi:id="BIGINT_1" keyConstraintSupported="false" primitiveType="BIGINT" jdbcEnumType="-5" javaClassName="long">
+  <predefinedDataTypeDefinitions
+      xmi:id="BIGINT_1"
+      primitiveType="BIGINT"
+      jdbcEnumType="-5"
+      javaClassName="long">
     <defaultValueTypes>NULL</defaultValueTypes>
     <name>BIGINT</name>
   </predefinedDataTypeDefinitions>
-
-  <predefinedDataTypeDefinitions xmi:id="BINARY_VARYING_1" keyConstraintSupported="false" primitiveType="BINARY_VARYING" jdbcEnumType="-3" javaClassName="byte[]">
+  <predefinedDataTypeDefinitions
+      xmi:id="BINARY_VARYING_1"
+      primitiveType="BINARY_VARYING"
+      jdbcEnumType="-3"
+      javaClassName="byte[]">
     <defaultValueTypes>NULL</defaultValueTypes>
     <name>VARBINARY</name>
   </predefinedDataTypeDefinitions>
-
-  <columnDefinition identitySupported="false" computedSupported="false" identityStartValueSupported="true" identityIncrementSupported="true" identityMinimumSupported="true" identityMaximumSupported="true" identityCycleSupported="true"/>
-  <constraintDefinition clusteredPrimaryKeySupported="true" clusteredUniqueConstraintSupported="true">
+  <!--
+  <columnDefinition
+      computedSupported="false"
+      identityStartValueSupported="true"
+      identityIncrementSupported="true"
+      identityMinimumSupported="true"
+      identityMaximumSupported="true"
+      identityCycleSupported="true"/>
+  <constraintDefinition
+      clusteredPrimaryKeySupported="true"
+      clusteredUniqueConstraintSupported="true">
     <parentUpdateDRIRuleType>RESTRICT</parentUpdateDRIRuleType>
     <parentUpdateDRIRuleType>NO_ACTION</parentUpdateDRIRuleType>
     <parentDeleteDRIRuleType>RESTRICT</parentDeleteDRIRuleType>
@@ -60,4 +94,124 @@
     <checkOption>LOCAL</checkOption>
     <checkOption>CASCADE</checkOption>
   </constraintDefinition>
+  -->
+  <SQLSyntaxDefinition>
+
+    <keywords>BOOLEAN</keywords>
+    <keywords>BIGINT</keywords>
+    <keywords>DOUBLE</keywords>
+    <keywords>VARCHAR</keywords>
+    <keywords>VARBINARY</keywords>
+    <keywords>DATE</keywords>
+    <keywords>TIME</keywords>
+    <keywords>WITH</keywords>
+    <keywords>ZONE</keywords>
+    <keywords>TIMESTAMP</keywords>
+    <keywords>INTERVAL</keywords>
+    <keywords>TO</keywords>
+    <keywords>YEAR</keywords>
+    <keywords>MONTH</keywords>
+    <keywords>DAY</keywords>
+    <keywords>HOUR</keywords>
+    <keywords>MINUTE</keywords>
+    <keywords>SECOND</keywords>
+
+    <keywords>SELECT</keywords>
+    <keywords>ALL</keywords>
+    <keywords>DISTINCT</keywords>
+    <keywords>FROM</keywords>
+    <keywords>WHERE</keywords>
+    <keywords>GROUP</keywords>
+    <keywords>BY</keywords>
+    <keywords>HAVING</keywords>
+    <keywords>UNION</keywords>
+    <keywords>ORDER</keywords>
+    <keywords>ASC</keywords>
+    <keywords>DESC</keywords>
+    <keywords>LIMIT</keywords>
+    <keywords>JOIN</keywords>
+    <keywords>INNER</keywords>
+    <keywords>OUTER</keywords>
+    <keywords>LEFT</keywords>
+    <keywords>RIGHT</keywords>
+    <keywords>FULL</keywords>
+    <keywords>CROSS</keywords>
+    <keywords>USING</keywords>
+    <keywords>AS</keywords>
+    <keywords>TABLESAMPLE</keywords>
+    <keywords>BERNOULLI</keywords>
+    <keywords>SYSTEM</keywords>
+
+    <keywords>OVER</keywords>
+    <keywords>PARTITION</keywords>
+    <keywords>RANGE</keywords>
+    <keywords>UNBOUNDED</keywords>
+    <keywords>PRECEDING</keywords>
+    <keywords>FOLLOWING</keywords>
+    <keywords>CURRENT</keywords>
+    <keywords>ROW</keywords>
+
+    <keywords>DESCRIBE</keywords>
+    <keywords>SHOW</keywords>
+    <keywords>CATALOGS</keywords>
+    <keywords>COLUMNS</keywords>
+    <keywords>PARTITIONS</keywords>
+    <keywords>SCHEMAS</keywords>
+    <keywords>TABLES</keywords>
+
+    <keywords>CREATE</keywords>
+    <keywords>TABLE</keywords>
+    <keywords>REPLACE</keywords>
+    <keywords>VIEW</keywords>
+    <keywords>DROP</keywords>
+
+    <keywords>EXPLAIN</keywords>
+    <keywords>FORMAT</keywords>
+    <keywords>TEXT</keywords>
+    <keywords>GRAPHVIZ</keywords>
+    <keywords>TYPE</keywords>
+    <keywords>LOCAL</keywords>
+    <keywords>DISTRIBUTED</keywords>
+
+    <keywords>USE</keywords>
+    <keywords>CATALOG</keywords>
+    <keywords>SCHEMA</keywords>
+
+    <keywords>NULL</keywords>
+    <keywords>CURRENT_DATE</keywords>
+    <keywords>CURRENT_TIME</keywords>
+    <keywords>CURRENT_TIMESTAMP</keywords>
+    <keywords>LOCALTIME</keywords>
+    <keywords>LOCALTIMESTAMP</keywords>
+
+    <operators>AND</operators>
+    <operators>OR</operators>
+    <operators>NOT</operators>
+
+    <operators>=</operators>
+    <operators>&lt;</operators>
+    <operators>&lt;=</operators>
+    <operators>&gt;</operators>
+    <operators>&gt;=</operators>
+    <operators>&lt;&gt;</operators>
+    <operators>!=</operators>
+    <operators>BETWEEN</operators>
+    <operators>IS</operators>
+    <operators>LIKE</operators>
+    <operators>IN</operators>
+
+    <operators>CASE</operators>
+    <operators>WHEN</operators>
+    <operators>THEN</operators>
+    <operators>ELSE</operators>
+    <operators>END</operators>
+
+    <operators>+</operators>
+    <operators>-</operators>
+    <operators>/</operators>
+    <operators>*</operators>
+    <operators>%</operators>
+    <operators>||</operators>
+
+  </SQLSyntaxDefinition>
 </DBDefinition:DatabaseVendorDefinition>

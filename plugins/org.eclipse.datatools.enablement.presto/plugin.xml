@@ -33,7 +33,7 @@
                   generated="false"
                   id="org.eclipse.datatools.connectivity.db.vendor"
                   name="%VENDOR_PROPERTY_NAME"
-                  value="presto"
+                  value="Presto"
                   required="true"
                   visible="false"/>
             <property
@@ -47,14 +47,14 @@
                   generated="false"
                   id="org.eclipse.datatools.connectivity.db.databaseName"
                   name="%DATABASE_NAME_PROPERTY_NAME"
-                  value=""
-                  required="false"
-                  visible="true"/>                             
+                  value="default"
+                  required="true"
+                  visible="false"/>                             
             <property
                   generated="false"
                   id="org.eclipse.datatools.connectivity.db.URL"
                   name="%CONNECTION_URL_PROPERTY_NAME"
-                  value="jdbc:presto://host:port/catalog"
+                  value="jdbc:presto://host:port/catalog/schema"
                   required="true"
                   visible="true"/>
             <property
@@ -62,7 +62,7 @@
                   id="org.eclipse.datatools.connectivity.db.username"
                   name="%USER_ID_PROPERTY_NAME"
                   value=""
-                  required="false"
+                  required="true"
                   visible="true"/>
          </properties>
       </driverTemplate>
@@ -94,7 +94,7 @@
       <overrideLoader
             provider="org.eclipse.datatools.enablement.presto.catalog.PrestoSchemaLoader"
             eclass="org.eclipse.datatools.modelbase.sql.schema.Schema"
-            product="presto"
+            product="Presto"
             version="0.74"/>
    </extension>
 </plugin>

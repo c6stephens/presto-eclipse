@@ -6,7 +6,7 @@
       <definition
             description="%product.display.description"
             file="runtime/vendors/PRESTO_0.74/PRESTO_0.74.xmi"
-            product="PRESTO"
+            product="Presto"
             productDisplayString="%product.display.string"
             version="0.74"
             versionDisplayString="%product.display.version.string"/>

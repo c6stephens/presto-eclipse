@@ -12,7 +12,7 @@
             profile="org.eclipse.datatools.enablement.presto.connectionProfile"/>
    </extension>
    
-      <extension
+   <extension
          point="org.eclipse.ui.propertyPages">
       <page
             class="org.eclipse.datatools.enablement.presto.ui.connection.PrestoProfilePropertyPage"
@@ -23,8 +23,7 @@
                value="org.eclipse.datatools.enablement.presto.connectionProfile"/>
          <enabledWhen>
             <instanceof
-                  value="org.eclipse.datatools.connectivity.IConnectionProfile">
-            </instanceof>
+                  value="org.eclipse.datatools.connectivity.IConnectionProfile"/>
          </enabledWhen>
       </page>
    </extension>
@@ -35,6 +34,17 @@
             driverTemplateID="org.eclipse.datatools.enablement.presto.0_74.driver"
             id="org.eclipse.datatools.enablement.presto.ui.connection.drivers.0_74.PrestoDriverUIContributor">
       </driverUIContributor>
+   </extension>
+
+   <extension
+         point="org.eclipse.datatools.sqltools.editor.core.dbConfigurations">
+      <dbConfiguration
+            configurationClass="org.eclipse.datatools.enablement.presto.ui.core.PrestoDBConfiguration"
+            default="false"
+            product="Presto"
+            version="0.74"
+            supportsDebugging="false">
+      </dbConfiguration>
    </extension>
    
 <!--

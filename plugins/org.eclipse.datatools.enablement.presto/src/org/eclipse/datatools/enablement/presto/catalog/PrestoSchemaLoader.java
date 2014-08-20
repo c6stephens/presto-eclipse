@@ -19,9 +19,9 @@ public class PrestoSchemaLoader extends JDBCSchemaLoader {
 			IConnectionFilterProvider connectionFilterProvider) {
 		super(catalogObject, connectionFilterProvider);
 	}
-
+	
+	@Override
 	protected Schema createSchema() {
 		return new PrestoCatalogSchema();
 	}
-
 }
