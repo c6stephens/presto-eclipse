@@ -1,0 +1,11 @@
+#!/bin/bash
+
+LOCAL_PORT="12999"
+TUNNEL_HOST="query-gateway.dataeng.netflix.net"
+TARGET_HOST="presto.master.dataeng.netflix.net"
+TARGET_PORT="8080"
+
+/usr/bin/ssh "${TUNNEL_HOST}" -L "${LOCAL_PORT}:${TARGET_HOST}:${TARGET_PORT}" -N -f -o PasswordAuthentication=no -o ConnectTimeout=4 -o ExitOnForwardFailure=yes
+
+exit 0
+
