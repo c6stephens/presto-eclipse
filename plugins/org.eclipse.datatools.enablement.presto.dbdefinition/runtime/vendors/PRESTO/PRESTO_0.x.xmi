@@ -4,7 +4,7 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:DBDefinition="http:///org/eclipse/datatools/modelbase/dbdefinition/dbdefinition.ecore"
     vendor="Presto"
-    version="0.74"
+    version="0.x"
     maximumIdentifierLength="64"
     maximumCommentLength="64"
     storedProcedureSupported="false">

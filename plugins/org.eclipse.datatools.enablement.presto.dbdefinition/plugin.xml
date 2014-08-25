@@ -5,10 +5,10 @@
          point="org.eclipse.datatools.connectivity.sqm.core.databaseDefinition">
       <definition
             description="%product.display.description"
-            file="runtime/vendors/PRESTO_0.74/PRESTO_0.74.xmi"
+            file="runtime/vendors/PRESTO/PRESTO_0.x.xmi"
             product="Presto"
             productDisplayString="%product.display.string"
-            version="0.74"
+            version="0.x"
             versionDisplayString="%product.display.version.string"/>
    </extension>
 </plugin>

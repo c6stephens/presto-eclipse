@@ -91,7 +91,8 @@ public class PrestoSQLSyntax implements ISQLSyntax {
 		"AND",
 		"OR",
 		"NOT",
-		"IS",	    
+		"IS",
+		"BETWEEN"
 	};
 
 	// Understanding the Elements of SQL Statements/SQL Operations

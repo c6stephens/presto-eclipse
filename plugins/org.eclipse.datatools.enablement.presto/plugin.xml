@@ -10,17 +10,17 @@
             parentCategory="org.eclipse.datatools.connectivity.db.driverCategory"/>
       <category
             description="%driver.version.category.description"
-            id="org.eclipse.datatools.enablement.presto.0_74.category"
+            id="org.eclipse.datatools.enablement.presto.0_x.category"
             name="%driver.version.category.name"
             parentCategory="org.eclipse.datatools.enablement.presto.driver.category"/>
       <driverTemplate
             createDefault="false"
             description="%driver.description"
             emptyJarListIsOK="false"
-            id="org.eclipse.datatools.enablement.presto.0_74.driver"
+            id="org.eclipse.datatools.enablement.presto.0_x.driver"
             jarList="presto-jdbc-0.74.jar"
             name="%driver.name"
-            parentCategory="org.eclipse.datatools.enablement.presto.0_74.category">
+            parentCategory="org.eclipse.datatools.enablement.presto.0_x.category">
          <properties>
             <property
                   generated="false"
@@ -40,7 +40,7 @@
                   generated="false"
                   id="org.eclipse.datatools.connectivity.db.version"
                   name="%VERSION_PROPERTY_NAME"
-                  value="0.74"
+                  value="0.x"
                   required="true"
                   visible="false"/>   
             <property
@@ -56,6 +56,43 @@
                   name="%CONNECTION_URL_PROPERTY_NAME"
                   value="jdbc:presto://host:port/catalog/schema"
                   required="true"
+                  visible="true"/>
+            <!--
+            <property
+                  generated="false"
+                  id="org.eclipse.datatools.enablement.presto.serverHost"
+                  name="Host"
+                  value="localhost"
+                  required="false"
+                  visible="true"/>
+            <property
+                  generated="false"
+                  id="org.eclipse.datatools.enablement.presto.serverPort"
+                  name="Port"
+                  value="12999"
+                  required="false"
+                  visible="true"/>
+            <property
+                  generated="false"
+                  id="org.eclipse.datatools.enablement.presto.catalogName"
+                  name="Catalog Name"
+                  value="hive"
+                  required="false"
+                  visible="true"/>
+            <property
+                  generated="false"
+                  id="org.eclipse.datatools.enablement.presto.schemaName"
+                  name="Schema Name"
+                  value=""
+                  required="false"
+                  visible="true"/>
+            -->
+            <property
+                  generated="false"
+                  id="org.eclipse.datatools.enablement.presto.tunnelCommand"
+                  name="Tunnel Command"
+                  value=""
+                  required="false"
                   visible="true"/>
             <property
                   generated="false"
@@ -95,6 +132,6 @@
             provider="org.eclipse.datatools.enablement.presto.catalog.PrestoSchemaLoader"
             eclass="org.eclipse.datatools.modelbase.sql.schema.Schema"
             product="Presto"
-            version="0.74"/>
+            version="0.x"/>
    </extension>
 </plugin>

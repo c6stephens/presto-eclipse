@@ -31,8 +31,8 @@
    <extension point="org.eclipse.datatools.connectivity.ui.driverUIContributor">
       <driverUIContributor
             class="org.eclipse.datatools.enablement.presto.ui.connection.drivers.PrestoDriverUIContributor"
-            driverTemplateID="org.eclipse.datatools.enablement.presto.0_74.driver"
-            id="org.eclipse.datatools.enablement.presto.ui.connection.drivers.0_74.PrestoDriverUIContributor">
+            driverTemplateID="org.eclipse.datatools.enablement.presto.0_x.driver"
+            id="org.eclipse.datatools.enablement.presto.ui.connection.drivers.0_x.PrestoDriverUIContributor">
       </driverUIContributor>
    </extension>
 
@@ -42,7 +42,7 @@
             configurationClass="org.eclipse.datatools.enablement.presto.ui.core.PrestoDBConfiguration"
             default="false"
             product="Presto"
-            version="0.74"
+            version="0.x"
             supportsDebugging="false">
       </dbConfiguration>
    </extension>
