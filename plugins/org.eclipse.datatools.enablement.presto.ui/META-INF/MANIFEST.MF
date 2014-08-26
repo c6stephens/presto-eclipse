@@ -25,5 +25,6 @@ Eclipse-LazyStart: true
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.datatools.enablement.presto.ui,
  org.eclipse.datatools.enablement.presto.ui.connection,
- org.eclipse.datatools.enablement.presto.ui.connection.drivers
+ org.eclipse.datatools.enablement.presto.ui.connection.drivers,
+ org.eclipse.datatools.enablement.presto.ui.result
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

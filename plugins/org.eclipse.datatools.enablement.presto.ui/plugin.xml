@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.2"?>
 <plugin>
+   <!--
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="org.eclipse.datatools"
+            class="org.eclipse.datatools.enablement.presto.ui.result.PrestoResultSetViewer"
+            icon="icons/sqlresult.gif"
+            id="org.eclipse.datatools.sqltools.result.resultView"
+            name="%results.view.name"/>
+   </extension>
+   -->
+
    <extension
          point="org.eclipse.datatools.connectivity.connectionProfile">
       <newWizard

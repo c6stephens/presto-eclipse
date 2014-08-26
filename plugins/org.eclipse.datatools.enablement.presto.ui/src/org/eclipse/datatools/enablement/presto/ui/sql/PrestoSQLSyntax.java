@@ -85,6 +85,7 @@ public class PrestoSQLSyntax implements ISQLSyntax {
 	    
 	    "CASE",
 	    "WHEN",
+	    "ELSE",
 	    "THEN",
 	    "END",
 	    
@@ -92,7 +93,8 @@ public class PrestoSQLSyntax implements ISQLSyntax {
 		"OR",
 		"NOT",
 		"IS",
-		"BETWEEN"
+		"BETWEEN",
+		"LIKE",
 	};
 
 	// Understanding the Elements of SQL Statements/SQL Operations

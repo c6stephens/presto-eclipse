@@ -1,6 +1,5 @@
 package org.eclipse.datatools.enablement.presto.ui.result;
 
-
 import org.eclipse.datatools.sqltools.result.IResultSetObject;
 import org.eclipse.datatools.sqltools.result.internal.ui.viewer.ResultSetViewer;
 import org.eclipse.datatools.sqltools.result.model.IResultInstance;

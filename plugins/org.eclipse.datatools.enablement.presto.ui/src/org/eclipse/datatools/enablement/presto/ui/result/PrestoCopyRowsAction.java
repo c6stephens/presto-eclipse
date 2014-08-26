@@ -73,9 +73,7 @@ public class PrestoCopyRowsAction extends Action
                     outValue = HexHelper.toHexString((byte[]) columnValue);
                 }
                 else {
-                	outValue = columnValue.toString();
-                	outValue.replaceAll(fieldSeparator, "    ");
-                	outValue.replaceAll(lineSeparator, " ");
+                	outValue = escape(columnValue.toString());
                 }
                 
                 sb.append(outValue);
@@ -103,4 +101,25 @@ public class PrestoCopyRowsAction extends Action
         else
         	return nullValue;
     }
+    
+    private static String escape(String s) {
+        StringBuffer sb = new StringBuffer("");
+
+        if (s == null || s.trim().equals(""))
+            return "";
+        
+        sb.append('\"');
+        for (int i = 0, size = s.length(); i < size; i++) {
+            
+        	char c = s.charAt(i);
+            
+            if (c == '\"')
+                sb.append("\"\"");
+            else
+                sb.append(c);
+        }
+        sb.append('\"');
+
+        return sb.toString();
+    }    
 }
