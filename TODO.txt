@@ -1,0 +1,20 @@
+To-Dos
+------
+
+1. Type in all of the Presto functions to this file:
+  
+     https://github.com/cjstep/presto-eclipse/blob/master/plugins/org.eclipse.datatools.enablement.presto.ui/src/org/eclipse/datatools/enablement/presto/ui/sql/PrestoSQLSyntax.java  
+
+2. Request fix for bug on Presto server side that causes column listings to fail.
+
+3. Play with this file to get 'Copy Rows' working, so we can copy and paste
+   results into Excel:
+
+     https://github.com/cjstep/presto-eclipse/blob/master/plugins/org.eclipse.datatools.enablement.presto.ui/src/org/eclipse/datatools/enablement/presto/ui/result/PrestoResultSetViewer.java
+
+   Requires enabling this ResultSetViewer in the 'plugin.xml':
+
+     https://github.com/cjstep/presto-eclipse/blob/master/plugins/org.eclipse.datatools.enablement.presto.ui/plugin.xml
+
+   I tried uncommenting the code at the top one day, and got a 'ClassNotFoundException' on load.
+

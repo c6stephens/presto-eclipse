@@ -89,28 +89,28 @@ public class PrestoSQLSyntax implements ISQLSyntax {
 	    "THEN",
 	    "END",
 	    
-		"AND",
-		"OR",
-		"NOT",
-		"IS",
-		"BETWEEN",
-		"LIKE",
+        "AND",
+        "OR",
+        "NOT",
+        "IS",
+        "BETWEEN",
+        "LIKE",
 	};
 
 	// Understanding the Elements of SQL Statements/SQL Operations
 	private static final String[] predicates = {
-			"+",
-			"-",
-			"*",
-			"/",
-			"=",
-			"<>",
-			"!=",
-			">",
-			">=",
-			"<",
-			"<=",
-			"||",
+		"+",
+		"-",
+		"*",
+		"/",
+		"=",
+		"<>",
+		"!=",
+		">",
+		">=",
+		"<",
+		"<=",
+		"||",
 	};
 
 	// SQL Data Types
@@ -141,6 +141,14 @@ public class PrestoSQLSyntax implements ISQLSyntax {
 		"GREATEST",
 		"LEAST",
 		"CAST",
+		
+		"AVG",
+		"COUNT",
+		"COUNT_IF",
+		"MAX",
+		"MAX_BY",
+		"MIN",
+		"SUM",
 	};
 
 	private static final String[] _comments = {
