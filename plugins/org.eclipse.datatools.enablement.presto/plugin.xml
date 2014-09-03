@@ -62,14 +62,14 @@
                   generated="false"
                   id="org.eclipse.datatools.enablement.presto.serverHost"
                   name="Host"
-                  value="localhost"
+                  value="presto.example.com"
                   required="false"
                   visible="true"/>
             <property
                   generated="false"
                   id="org.eclipse.datatools.enablement.presto.serverPort"
                   name="Port"
-                  value="12999"
+                  value="8080"
                   required="false"
                   visible="true"/>
             <property
@@ -87,13 +87,6 @@
                   required="false"
                   visible="true"/>
             -->
-            <property
-                  generated="false"
-                  id="org.eclipse.datatools.enablement.presto.tunnelCommand"
-                  name="Tunnel Command"
-                  value=""
-                  required="false"
-                  visible="true"/>
             <property
                   generated="false"
                   id="org.eclipse.datatools.connectivity.db.username"
