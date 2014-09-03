@@ -15,5 +15,4 @@ public class PrestoJDBCConnectionFactory extends JDBCConnectionFactory {
 		connection.open();
 		return connection;
 	}
-
 }
