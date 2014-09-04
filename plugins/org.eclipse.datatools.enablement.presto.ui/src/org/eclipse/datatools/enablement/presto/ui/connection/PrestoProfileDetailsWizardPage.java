@@ -7,6 +7,6 @@ public class PrestoProfileDetailsWizardPage extends
 		ExtensibleProfileDetailsWizardPage {
 
 	public PrestoProfileDetailsWizardPage(String pageName) {
-		super(pageName, IPrestoConnectionProfileConstants.Presto_CATEGORY_ID);
+		super(pageName, IPrestoConnectionProfileConstants.PRESTO_CATEGORY_ID);
 	}
 }

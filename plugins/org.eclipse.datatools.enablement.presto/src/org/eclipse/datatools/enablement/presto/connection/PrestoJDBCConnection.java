@@ -21,7 +21,14 @@ public class PrestoJDBCConnection extends JDBCConnection {
 	}
 		
 	private void validateConnection() {
-		try {
+		if (getRawConnection() == null) {
+			if (mConnectException == null) {
+				mConnectException = new SQLException("Unable to open JDBC connection - reason unknown");
+			}
+			return;
+		}
+			
+		try {			
 			Connection c = (Connection)getRawConnection();
 			Statement s = c.createStatement();
 			s.executeQuery("select current_date");

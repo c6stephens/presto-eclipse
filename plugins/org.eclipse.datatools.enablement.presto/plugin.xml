@@ -48,51 +48,21 @@
                   id="org.eclipse.datatools.connectivity.db.databaseName"
                   name="%DATABASE_NAME_PROPERTY_NAME"
                   value="default"
-                  required="true"
+                  required="false"
                   visible="false"/>                             
             <property
                   generated="false"
                   id="org.eclipse.datatools.connectivity.db.URL"
                   name="%CONNECTION_URL_PROPERTY_NAME"
-                  value="jdbc:presto://host:port/catalog/schema"
-                  required="true"
-                  visible="true"/>
-            <!--
-            <property
-                  generated="false"
-                  id="org.eclipse.datatools.enablement.presto.serverHost"
-                  name="Host"
-                  value="presto.example.com"
-                  required="false"
-                  visible="true"/>
-            <property
-                  generated="false"
-                  id="org.eclipse.datatools.enablement.presto.serverPort"
-                  name="Port"
-                  value="8080"
-                  required="false"
-                  visible="true"/>
-            <property
-                  generated="false"
-                  id="org.eclipse.datatools.enablement.presto.catalogName"
-                  name="Catalog Name"
-                  value="hive"
-                  required="false"
-                  visible="true"/>
-            <property
-                  generated="false"
-                  id="org.eclipse.datatools.enablement.presto.schemaName"
-                  name="Schema Name"
                   value=""
                   required="false"
                   visible="true"/>
-            -->
             <property
                   generated="false"
                   id="org.eclipse.datatools.connectivity.db.username"
                   name="%USER_ID_PROPERTY_NAME"
                   value=""
-                  required="true"
+                  required="false"
                   visible="true"/>
          </properties>
       </driverTemplate>

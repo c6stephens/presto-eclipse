@@ -7,6 +7,6 @@ public class PrestoProfilePropertyPage extends
 		ExtensibleProfileDetailsPropertyPage {
 
 	public PrestoProfilePropertyPage() {
-		super(IPrestoConnectionProfileConstants.Presto_CATEGORY_ID);
+		super(IPrestoConnectionProfileConstants.PRESTO_CATEGORY_ID);
 	}
 }
