@@ -1,0 +1,107 @@
+#!/bin/bash -eu
+
+# Give some information on any errors that occur.
+function error_handler() {
+    SCRIPT_NAME=$(basename $0)
+    LAST_LINE="$1"
+    STATUS_CODE="$2"
+    echo "${SCRIPT_NAME}: line ${LAST_LINE}: last command exited with status = ${STATUS_CODE}"
+}
+
+trap 'error_handler ${LINENO} $?' ERR
+
+# Move to the script directory.
+cd $(dirname $0)
+
+echo
+echo "*********************************************"
+echo " Presto Plugin for Teradata Studio Installer "
+echo "*********************************************"
+echo
+
+echo "Hit 'Enter' to accept the default value."
+echo
+
+java -version
+echo
+echo "Please verify your Java version is 1.7 or higher.  If it is not, please "
+echo "hit Ctrl-C to exit or answer 'No', and install the Java 8 JDK."
+echo
+echo "Is your Java version 1.7 or higher?  [No]"
+read ANSWER
+echo
+
+if [ -z "${ANSWER}" ]; then
+    echo "Exiting ..."
+    exit 1
+fi
+
+if [[ ! "${ANSWER}" = "Yes" && ! "${ANSWER}" = "yes" && ! "${ANSWER}" = "Y" && ! "${ANSWER}" = "y" ]]; then
+    echo "Exiting ..."
+    exit 1
+fi
+
+TS_PATH_DEFAULT="/Applications/TeradataStudioExpress"
+echo "Where is Teradata Studio or Teradata Studio Express installed?  [${TS_PATH_DEFAULT}]"
+read TS_PATH
+echo
+
+if [ -z "${TS_PATH}" ]; then
+    TS_PATH="${TS_PATH_DEFAULT}"
+fi
+
+PLUGINS_DIR="${TS_PATH}/plugins"
+
+if [ ! -d "${PLUGINS_DIR}" ]; then
+   echo "'${PLUGINS_DIR}' directory not found."
+   exit 1
+else
+   echo "'${PLUGINS_DIR}' directory found."
+   echo
+fi
+
+echo "Please enter your administrator password when prompted.  Access may take a few seconds ..."
+sudo echo "hello" > /dev/null
+echo
+
+echo "- Removing any existing Presto for Eclipse plugins ..."
+sudo rm -v -f ${PLUGINS_DIR}/*presto*.jar
+echo
+
+echo "- Copying Presto for Eclipse plugin JARs ..."
+sudo cp -v eclipse/plugins/*presto*.jar ${PLUGINS_DIR}/
+echo
+
+echo "- Copying modified Presto JDBC jar ..."
+sudo cp -f -v presto-jdbc/*.jar ${TS_PATH}/
+echo
+
+TS_CONFIG_PATH=$(find ${TS_PATH}/ -name 'TeradataStudio*.ini')
+
+echo "- Modifying Teradata Studio configuration file ..."
+LIBJVM_PATH="$(find /Library/Java -name 'libjvm.dylib' | sort -r | head -n 1)"
+set -x
+sudo perl -p -i.orig -e "s%.*/bin/java%${LIBJVM_PATH}%" "${TS_CONFIG_PATH}"
+set +x
+echo
+
+echo "*** INSTALLATION COMPLETED SUCCESSFULLY ***"
+echo
+
+echo "- Launching Teradata Studio in '-clean' mode ..."
+EXEC_DIR=$(dirname "${TS_CONFIG_PATH}")
+cd "${EXEC_DIR}"
+
+if [ -x "./TeradataStudioExpress" ]; then
+    exec ./TeradataStudioExpress -clean
+fi
+
+if [ -x "./TeradataStudio" ]; then
+    exec ./TeradataStudio -clean
+fi
+
+echo "Unable to find Teradata Studio executable.  Please start manually with '-clean' command line option."
+echo
+exit 1
+
+
