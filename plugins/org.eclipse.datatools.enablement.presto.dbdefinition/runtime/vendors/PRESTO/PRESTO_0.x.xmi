@@ -20,7 +20,7 @@
       xmi:id="CHARACTER_1"
       lengthSupported="true"
       maximumLength="2147483647"
-      jdbcEnumType="12"
+      jdbcEnumType="-16"
       javaClassName="java.lang.String">
     <defaultValueTypes>NULL</defaultValueTypes>
     <name>VARCHAR</name>
@@ -68,7 +68,7 @@
   <predefinedDataTypeDefinitions
       xmi:id="BINARY_VARYING_1"
       primitiveType="BINARY_VARYING"
-      jdbcEnumType="-3"
+      jdbcEnumType="-4"
       javaClassName="byte[]">
     <defaultValueTypes>NULL</defaultValueTypes>
     <name>VARBINARY</name>
