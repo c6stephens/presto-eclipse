@@ -93,14 +93,14 @@ EXEC_DIR=$(dirname "${TS_CONFIG_PATH}")
 cd "${EXEC_DIR}"
 
 if [ -x "./TeradataStudioExpress" ]; then
-    exec ./TeradataStudioExpress -clean
+    exec ./TeradataStudioExpress -clean -consolelog
 fi
 
 if [ -x "./TeradataStudio" ]; then
-    exec ./TeradataStudio -clean
+    exec ./TeradataStudio -clean -consolelog
 fi
 
-echo "Unable to find Teradata Studio executable.  Please start manually with '-clean' command line option."
+echo "Unable to find Teradata Studio executable.  Please start manually with '-clean -consolelog' command line options."
 echo
 exit 1
 
