@@ -80,10 +80,24 @@ TS_CONFIG_PATH=$(find ${TS_PATH}/ -name 'TeradataStudio*.ini')
 
 echo "- Modifying Teradata Studio configuration file ..."
 LIBJVM_PATH="$(find /Library/Java -name 'libjvm.dylib' | sort -r | head -n 1)"
-set -x
-sudo perl -p -i.orig -e "s%.*/bin/java%${LIBJVM_PATH}%" "${TS_CONFIG_PATH}"
-set +x
+
+sudo cp -n -v "${TS_CONFIG_PATH}" "${TS_CONFIG_PATH}.orig"
+sudo tee "${TS_CONFIG_PATH}" << !EOI! 
+-vm
+${LIBJVM_PATH}
+-vmargs
+-XstartOnFirstThread
+-Dorg.eclipse.swt.internal.carbon.smallFonts
+-Dosgi.requiredJavaVersion=1.6
+-Xms512m
+-Xmx512m
+-XX:MaxPermSize=512m
+-Djava.util.Arrays.useLegacyMergeSort=true
+!EOI!
+
 echo
+echo "- Verifying Teradata Studio configuration file ..."
+fgrep libjvm.dylib "${TS_CONFIG_PATH}"
 
 echo "*** INSTALLATION COMPLETED SUCCESSFULLY ***"
 echo
